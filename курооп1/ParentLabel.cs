@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
 
             label = new Label();
             label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            label.Font = new System.Drawing.Font("Webdings", 72F-2*table.RowCount, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             label.Location = new System.Drawing.Point(404, 383);
             label.Size = new System.Drawing.Size(125, 127);
             if (this is ChildLabel)
@@ -31,15 +31,22 @@ namespace WindowsFormsApplication1
                 str = icons[numran].ToString();
                 icons.RemoveAt(numran);
                 Loc = rd.Next(Num.Count);
-            }
+            };
             label.Name = "label" + Loc;
             label.Text = str;
             label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //label.Click += new System.EventHandler(this.label1_Click);
             int col = Convert.ToInt32(Num[Loc][0].ToString());
             int row = Convert.ToInt32(Num[Loc][1].ToString());
             table.Controls.Add(label, col, row);
+            label.ForeColor = label.BackColor;
             Num.RemoveAt(Loc);
         }
+
+        public ParentLabel AddClick(System.EventHandler f)
+        {
+            this.label.Click += f;
+            return this;
+        }
+
     }
 }

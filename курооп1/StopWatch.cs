@@ -31,8 +31,7 @@ namespace WindowsFormsApplication1
             Form.Controls.Add(labelTime);
         }
 
-        private void timerMain_Tick(System.Object sender, 
-                                    System.EventArgs e)
+        private void timerMain_Tick(System.Object sender, System.EventArgs e)
         {
             // When the timer is running, update the displayed timer 
             // value for each tick event.
@@ -47,7 +46,7 @@ namespace WindowsFormsApplication1
                     ts.Minutes, ts.Seconds, 
                     ts.Milliseconds/10);
             }
-            }
+        }
 
     }
 

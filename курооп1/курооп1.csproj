@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChildLabel.cs" />
+    <Compile Include="Click.cs" />
     <Compile Include="FormRes.cs">
       <SubType>Form</SubType>
     </Compile>

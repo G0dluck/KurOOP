@@ -103,10 +103,14 @@ namespace WindowsFormsApplication1
             "?", "D", ".", "T", "q", "a", "o", "s", "r"
                 };
 
+            Click click = new Click();
+
             for (int i = 0; i < (n*n)/2; i++)
             {
                 ParentLabel parent = new ParentLabel(table, Num, icons);
                 ChildLabel child = new ChildLabel(table, Num, icons, parent.str);
+                parent.AddClick(click.label_Click);
+                child.AddClick(click.label_Click);
             }
 
             splitContainer1.Panel2.Show();

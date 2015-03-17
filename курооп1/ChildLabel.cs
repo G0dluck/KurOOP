@@ -8,6 +8,7 @@ namespace WindowsFormsApplication1
 {
     class ChildLabel: ParentLabel
     {
+        protected Label firstClicked1 = null;
         public ChildLabel(TableLayoutPanel table, List<string> Num, List<string> icons, String str)
             : base(table, Num, icons)
         {
