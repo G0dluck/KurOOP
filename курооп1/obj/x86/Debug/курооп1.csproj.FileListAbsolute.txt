@@ -15,3 +15,5 @@ C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\куроо�
 C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\курооп1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\курооп1\obj\x86\Debug\курооп1.csproj.GenerateResource.Cache
 C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\курооп1\obj\x86\Debug\курооп1.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\курооп1\obj\x86\Debug\Interop.ADOX.dll
+C:\Users\Anton\Documents\Visual Studio 2010\Projects\курооп2.0\курооп1\obj\x86\Debug\курооп1.csproj.ResolveComReference.cache

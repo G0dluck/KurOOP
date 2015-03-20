@@ -14,8 +14,11 @@ namespace WindowsFormsApplication1
         int n;
         StartMenu start;
         SplitContainer splitContainer1;
+        TableLayoutPanel table;
         List<string> Num;
         List<string> icons;
+        Label label1;
+        StopWatch watch;
         public FormMain()
         {
             InitializeComponent();
@@ -39,40 +42,43 @@ namespace WindowsFormsApplication1
 
         private void Form2_Shown(object sender, EventArgs e)
         {
-            //start.AddClick(Bt_Click);
-            StopWatch watch = new StopWatch(splitContainer1.Panel1);
+            watch = new StopWatch(splitContainer1.Panel1);
 
-        }
-
-        private void Bt_Click(object sender, EventArgs e)
-        {
-           /* if (((Button)sender).Name.ToString() == "4x4")
-                n = 4;
-            else
-            {
-                n = 6;
-                this.Height += 150;
-            }
-            pictureBox1 = new TPicBox(this, n, this.ClientSize.Width / 2 - (n / 2) * 80 - 8 * (n / 2));
-            start.HidePanel();
-            pictureBox1.VoteNum();
-            pictureBox1.ShowPic();
-            Timer timer1 = new Timer();
-            timer1.Interval = start.trackbar.trackBar1.Value * 1000;
-            timer1.Tick += new EventHandler(this.timer1_Tick);
-            timer1.Start();*/
+            Label label = new Label();
+            label.Location = new System.Drawing.Point(0, 100);
+            label.Size = new System.Drawing.Size(250, 30);
+            label.Font = new System.Drawing.Font("Comic Sans MS", 15.0f, System.Drawing.FontStyle.Bold);
+            label.ForeColor = System.Drawing.Color.Red;
+            label.Text = "Колличество ошибок:";
+            splitContainer1.Panel1.Controls.Add(label);
+            label1 = new Label();
+            label1.Location = new System.Drawing.Point(100, 130);
+            label1.Size = new System.Drawing.Size(70, 40);
+            label1.Font = new System.Drawing.Font("Comic Sans MS", 20.0f, System.Drawing.FontStyle.Bold);
+            label1.ForeColor = System.Drawing.Color.Red;
+            splitContainer1.Panel1.Controls.Add(label1);
+            label1.Text = "0";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             ((Timer)sender).Stop();
-            //pictureBox1.HidePic();
+
+
+            foreach (Control control in table.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                iconLabel.ForeColor = iconLabel.BackColor;
+                iconLabel.Enabled = true;
+            }
+            watch.stopWatch.Start();
         }
 
         private void FormMain_ControlRemoved(object sender, ControlEventArgs e)
         {
             n = start.n;
-            TableLayoutPanel table = new TableLayoutPanel();
+            table = new TableLayoutPanel();
             table.Dock = DockStyle.Fill;
             table.RowCount = n;
             table.ColumnCount = n;
@@ -103,7 +109,8 @@ namespace WindowsFormsApplication1
             "?", "D", ".", "T", "q", "a", "o", "s", "r"
                 };
 
-            Click click = new Click();
+            Click click = new Click(label1);
+            click.CheckForWin(table, watch.stopWatch, n);
 
             for (int i = 0; i < (n*n)/2; i++)
             {
@@ -114,6 +121,13 @@ namespace WindowsFormsApplication1
             }
 
             splitContainer1.Panel2.Show();
+            Num = null;
+            icons = null;
+
+            Timer timer1 = new Timer();
+            timer1.Interval = start.trackbar.trackBar1.Value * 1000;
+            timer1.Tick += new EventHandler(this.timer1_Tick);
+            timer1.Start();
             
         }
     }
