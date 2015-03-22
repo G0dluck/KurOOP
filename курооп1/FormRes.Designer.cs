@@ -136,7 +136,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormRes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRes";
             this.Shown += new System.EventHandler(this.FormRes_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

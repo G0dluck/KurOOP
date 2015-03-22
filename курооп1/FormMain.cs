@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         public FormMain()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 
             start = new StartMenu(this);
 
@@ -40,7 +41,7 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void Form2_Shown(object sender, EventArgs e)
+        private void FormMain_Shown(object sender, EventArgs e)
         {
             watch = new StopWatch(splitContainer1.Panel1);
 
@@ -105,8 +106,8 @@ namespace WindowsFormsApplication1
             else
                 icons = new List<string>()
                 {
-            "!", "N", ",", "k", "b", "v", "w", "z", "y",
-            "?", "D", ".", "T", "q", "a", "o", "s", "r"
+            "!", "N", ",", "k", "b", "v", "w", "z", "d",
+            "?", "~", "@", "%", "-", "Y", "L", "h", "r"
                 };
 
             Click click = new Click(label1);

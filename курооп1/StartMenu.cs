@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
             //panel.BackgroundImage = Image.FromFile(Environment.CurrentDirectory.ToString() + "\\images\\ramka.png");
             //panel.BackgroundImageLayout = ImageLayout.Stretch;
             form.Controls.Add(panel);
+            
 
             bt4 = new Button();
             bt4.Location = new System.Drawing.Point(panel.Width/2-40, panel.Height/2 - 15);
@@ -45,6 +46,7 @@ namespace WindowsFormsApplication1
             panel.Controls.Add(bt6);
   
             trackbar = new Trackbar(panel);
+            
         }
 
         private void Bt_Click(object sender, EventArgs e)

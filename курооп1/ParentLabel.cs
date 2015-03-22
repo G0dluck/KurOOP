@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
 
             label = new Label();
             label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.Font = new System.Drawing.Font("Webdings", 72F-2*table.RowCount, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            label.Font = new System.Drawing.Font("Webdings", 100F-10*table.RowCount, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             label.Location = new System.Drawing.Point(404, 383);
             label.Size = new System.Drawing.Size(125, 125);
             if (this is ChildLabel)

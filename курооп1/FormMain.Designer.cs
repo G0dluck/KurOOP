@@ -38,7 +38,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
-            this.Shown += new System.EventHandler(this.Form2_Shown);
+            this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.FormMain_ControlRemoved);
             this.ResumeLayout(false);
 
