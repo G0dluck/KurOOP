@@ -22,8 +22,6 @@ namespace WindowsFormsApplication1
             panel.Location = new System.Drawing.Point(form.ClientSize.Width / 2 - form.ClientSize.Width / 4, form.ClientSize.Height / 2 - form.ClientSize.Height / 4);
             panel.Size = new System.Drawing.Size(form.ClientSize.Width/2, form.ClientSize.Height/2);
             panel.BackColor = Color.MediumSeaGreen;
-            //panel.BackgroundImage = Image.FromFile(Environment.CurrentDirectory.ToString() + "\\images\\ramka.png");
-            //panel.BackgroundImageLayout = ImageLayout.Stretch;
             form.Controls.Add(panel);
             
 

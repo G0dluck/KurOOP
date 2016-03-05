@@ -88,7 +88,6 @@ namespace WindowsFormsApplication1
                 table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
                 table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             }
-            //table.BackColor = Color.LightSeaGreen;
             splitContainer1.SplitterDistance = 329;
             splitContainer1.Panel2.Hide();
             table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
@@ -98,12 +97,6 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++)
                     Num.Add(i.ToString() + j.ToString());
-            if (n==4)
-                icons = new List<string>()
-                {
-            "!", "N", ",", "k", "b", "v", "w", "z"
-                };
-            else
                 icons = new List<string>()
                 {
             "!", "N", ",", "k", "b", "v", "w", "z", "d",

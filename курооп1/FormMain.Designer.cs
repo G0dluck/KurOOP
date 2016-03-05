@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(984, 462);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain";
+            this.Text = "Игра \"Память\"";
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.FormMain_ControlRemoved);
             this.ResumeLayout(false);

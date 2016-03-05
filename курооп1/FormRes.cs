@@ -35,9 +35,13 @@ namespace WindowsFormsApplication1
             }
             catch
             {
-                this.Close();
-                button1.Text = "error";
-                return;
+                var result = MessageBox.Show("Невозможно подключиться к базе данных",
+                                "Ошибка базы данных", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                if (result == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
             }
 
             OleDbCommand cmd = new OleDbCommand("Insert into ResultsGame" +
@@ -96,7 +100,7 @@ namespace WindowsFormsApplication1
 
         private void FormRes_Shown(object sender, EventArgs e)
         {
-            CommandText = "SELECT [ID], Имя, Ошибки, Время, Поле FROM ResultsGame WHERE Поле like " + n;
+            CommandText = "SELECT Имя, Ошибки, Время FROM ResultsGame WHERE Поле like " + n;
             label2.Text += time;
             label3.Text += error.ToString();
 
@@ -133,7 +137,9 @@ namespace WindowsFormsApplication1
                 cat = null;
                 table = null;
                 primKeyIdx = null;
-                MessageBox.Show("База данных создана.", "База данных");
+                MessageBox.Show("Отсутствует база данных. Будет создана новая база данных.",
+                                "Предупреждение!", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Warning);
             }
         }
 

@@ -101,8 +101,6 @@ namespace WindowsFormsApplication1
                 ts.Milliseconds / 10);
             form.n = n;
             form.ShowDialog();
-            //MessageBox.Show("You matched all the icons!", "Congratulations");
-            //Close();
         }
     }
 }
