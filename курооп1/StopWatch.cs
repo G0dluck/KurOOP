@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
     class StopWatch
     {
        public Stopwatch stopWatch;
-       System.Windows.Forms.Label labelTime;
+       public System.Windows.Forms.Label labelTime;
        private System.Windows.Forms.Timer timerMain;
 
        public StopWatch(Panel Form)
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             stopWatch = new Stopwatch();
             timerMain = new System.Windows.Forms.Timer();
             timerMain.Enabled = true;
-            timerMain.Interval = 50;
+            timerMain.Interval = 30;
             timerMain.Tick += new System.EventHandler(this.timerMain_Tick); 
             labelTime = new System.Windows.Forms.Label();
             labelTime.Font = new System.Drawing.Font("Comic Sans MS", 18.0F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

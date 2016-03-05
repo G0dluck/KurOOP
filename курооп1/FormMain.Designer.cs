@@ -34,11 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 464);
+            this.ClientSize = new System.Drawing.Size(984, 462);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain";
-            this.Shown += new System.EventHandler(this.Form2_Shown);
+            this.Text = "Игра \"Память\"";
+            this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.FormMain_ControlRemoved);
             this.ResumeLayout(false);
 

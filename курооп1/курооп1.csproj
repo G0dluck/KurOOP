@@ -98,7 +98,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bin\Debug\images\1.png" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,55 +134,15 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\images\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\17.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\images\18.png" />
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
